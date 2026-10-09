@@ -609,6 +609,15 @@ flows, and the organization/resource JSON API.
 
 ---
 
+## Contributing
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for local setup, the test commands and
+the coding/branching conventions.
+
+---
+
 ## License
 
-Proprietary — TYBCA hackathon project.
+Proprietary — TYBCA hackathon project. See [`LICENSE`](./LICENSE) for the full
+terms. Third-party components (PHP, MySQL/MariaDB, Leaflet + OpenStreetMap,
+Chart.js, and any configured AI provider) remain under their own licenses.
