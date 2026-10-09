@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------
+# ResQLink — Git ignore rules
+# ---------------------------------------------------------------
+
+# Environment / secrets (NEVER commit)
+.env
+.env.*
+!.env.example
+
+# Machine-specific PHP config (see php.ini.example)
+php.ini
+
+# Dependencies
+/vendor/
+node_modules/
+
+# Runtime storage (keep directories, ignore contents)
+storage/logs/*
+!storage/logs/.gitkeep
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/cache/*
+!storage/cache/.gitkeep
+
+# Local tooling metadata (agent/editor state, not part of the project)
+.freebuff/
+.kilo/
+
+# IDE / editor
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+*.tmp
+*.cache
+
+# Note: user uploads live in storage/uploads (outside the web root) for security.

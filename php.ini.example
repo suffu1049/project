@@ -1,0 +1,31 @@
+; ---------------------------------------------------------------------------
+; ResQLink — project-local PHP configuration (EXAMPLE)
+;
+; The PHP CLI on some Windows setups loads no php.ini, so PDO MySQL is missing.
+; Copy this file to `php.ini` and set `extension_dir` to YOUR PHP ext folder,
+; then run commands with:   php -c php.ini <script>
+;
+;   cp php.ini.example php.ini
+;
+; `php.ini` is git-ignored and never committed.
+; ---------------------------------------------------------------------------
+
+; Point this at the extension directory of the PHP build you are using.
+; Example: extension_dir = "C:\php-8.4.10-Win32-vs17-x64\ext"
+extension_dir = "C:\path\to\php\ext"
+
+; Required extension for the MySQL/MariaDB connection layer.
+extension=pdo_mysql
+
+; Recommended extensions.
+extension=mbstring
+extension=openssl
+extension=curl
+extension=fileinfo
+
+; CA bundle for outbound HTTPS — required for live AI provider calls.
+; If this is unset, PHP cURL fails with "errno=60 unable to get local issuer
+; certificate" and every AI request silently falls back to the keyword engine.
+; Point it at a real bundle, e.g. XAMPP ships one at:
+;   curl.cainfo = "C:\xampp\apache\bin\curl-ca-bundle.crt"
+;curl.cainfo = "C:\path\to\curl-ca-bundle.crt"
